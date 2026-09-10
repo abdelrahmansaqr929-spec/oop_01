@@ -16,7 +16,10 @@ namespace oop_01
             Street = street;
             BulidingNumber = bn;
         }
-        
+        public string GetFullAddress()
+        {
+            return $"{BulidingNumber} {Street} St., {City}";
+        }
 
     }
 }

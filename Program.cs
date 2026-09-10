@@ -32,7 +32,10 @@ namespace oop_01
             #endregion
             #region answer_05
             //changes in struct Shipment
-            #endregion 
+            #endregion
+            #region answer_06
+            //changes in struct Shipment
+            #endregion
 
 
         }

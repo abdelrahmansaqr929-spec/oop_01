@@ -85,5 +85,21 @@ namespace oop_01
             Destination = destination;
         }
 
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                DeliveryFee = newFee; 
+            }
+        }
+
+        public void PrintShipment()
+        {
+            Console.WriteLine($"Tracking Code: {TrackingCode}, Description: {Description}, Weight: {Weight}kg");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}"); 
+            Console.WriteLine($"Delivery Fee: {DeliveryFee:C}, Estimated Total Cost: {EstimatedCost:C}");
+            Console.WriteLine(new string('-', 30));
+        }
     }
 }
+
