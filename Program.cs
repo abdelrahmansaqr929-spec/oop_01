@@ -36,6 +36,9 @@ namespace oop_01
             #region answer_06
             //changes in struct Shipment
             #endregion
+            #region answer_07
+            //changes in struct DeliveryCenter
+            #endregion
 
 
         }

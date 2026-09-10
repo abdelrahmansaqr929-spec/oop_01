@@ -4,7 +4,7 @@ using System.Text;
 
 namespace oop_01
 {
-    internal struct Shipment
+    public struct Shipment
 
     {
             private string trackingCode;
