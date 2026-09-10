@@ -39,6 +39,55 @@ namespace oop_01
             #region answer_07
             //changes in struct DeliveryCenter
             #endregion
+            #region answer_08
+            DeliveryCenter center = new DeliveryCenter(10);
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine($"--- Enter Details for Shipment {i} ---");
+                Console.Write("Tracking Code: ");
+                string code = Console.ReadLine();
+
+                Console.Write("Description: ");
+                string desc = Console.ReadLine();
+
+                Console.Write("Weight: ");
+                decimal.TryParse(Console.ReadLine(), out decimal weight);
+                Console.Write("Delivery Fee: ");
+                decimal.TryParse(Console.ReadLine(), out decimal fee);
+                Console.WriteLine("--- Enter Destination Details ---");
+                Console.Write("City: ");
+                string city = Console.ReadLine();
+                Console.Write("Street: ");
+                string street = Console.ReadLine();
+                Console.Write("Building Number: ");
+                int.TryParse(Console.ReadLine(), out int bldgNum);
+                DeliveryAddress address = new DeliveryAddress(city, street, bldgNum);
+                Shipment shipment = new Shipment(code, desc, weight, fee, address);
+                center.AddShipment(shipment);
+            }
+
+            Console.Clear();
+            Console.WriteLine("=== All Shipments ===\n");
+            for (int i = 0; i < 3; i++)
+            {
+                Shipment s = center[i];
+                if (s.TrackingCode != null)
+                    s.PrintShipment();
+            }
+            Console.Write("Enter a tracking code to search: ");
+            string searchCode = Console.ReadLine();
+            Shipment foundShipment = center[searchCode];
+
+            if (foundShipment.TrackingCode != null)
+            {
+                Console.WriteLine("\nShipment Found:");
+                foundShipment.PrintShipment();
+            }
+            else
+            {
+                Console.WriteLine("\nShipment not found.");
+            }
+            #endregion
 
 
         }
