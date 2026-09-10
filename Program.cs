@@ -26,10 +26,12 @@ namespace oop_01
             Console.WriteLine(d1.City,d1.BulidingNumber,d1.Street);
             Console.WriteLine(d2.City,d2.BulidingNumber,d2.Street);
 
+            #endregion
+            #region answer_04
 
             #endregion
 
-
+        
         }
     }
 }
