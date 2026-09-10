@@ -28,10 +28,13 @@ namespace oop_01
 
             #endregion
             #region answer_04
-
+            //changens in struct Shipment
             #endregion
+            #region answer_05
+            //changes in struct Shipment
+            #endregion 
 
-        
+
         }
     }
 }

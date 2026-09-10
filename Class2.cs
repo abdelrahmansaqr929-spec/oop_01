@@ -61,6 +61,29 @@ namespace oop_01
             {
                 get { return DeliveryFee + (Weight * 5); }
             }
-
+        public Shipment(string trackingCode)
+        { 
+            this.trackingCode = "DEFAULT"; 
+            this.description = "Unknown";
+            this.weight = 1;
+            this.deliveryFee = 50;
+            Destination = new DeliveryAddress(); 
+            TrackingCode = trackingCode;
         }
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
+        {
+
+            this.trackingCode = "DEFAULT";
+            this.description = "Unknown";
+            this.weight = 1;
+            this.deliveryFee = 50;
+
+            TrackingCode = trackingCode;
+            Description = description;
+            Weight = weight;
+            DeliveryFee = deliveryFee;
+            Destination = destination;
+        }
+
+    }
 }
