@@ -18,7 +18,16 @@ namespace oop_01
             //Breaks Data Hiding: Internal data is exposed, meaning any future changes to how data is stored will break the code
             //2-Private Fields: Hide the internal data and prevent direct external access.
             //Public Properties: Act as a gatekeeper to validate data before saving it, giving you full control over read and write permissions
-            #endregion 
+            #endregion
+            #region answer_03
+            DeliveryAddress d1 = new DeliveryAddress("ss","ss",0) ;
+            DeliveryAddress d2 = new DeliveryAddress("d","dd",1);
+            d2 = d1;
+            Console.WriteLine(d1.City,d1.BulidingNumber,d1.Street);
+            Console.WriteLine(d2.City,d2.BulidingNumber,d2.Street);
+
+
+            #endregion
 
 
         }
