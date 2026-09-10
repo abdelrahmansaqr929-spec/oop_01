@@ -1,4 +1,6 @@
-﻿namespace oop_01
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace oop_01
 {
     internal class Program
     {
@@ -9,8 +11,14 @@
             //the original variable remains completely unchanged.
             //2- it is class so it will be refranse type so When a Customer variable is copied into another variable,
             //modifying the object through one variable will alter the object for both variables
+            #endregion
+            #region answer_02
+            //1-No Validation so Anyone can assign invalid values directly(like a negative weight).
+            //No Access Control: You cannot make a variable read-only or prevent modifications.
+            //Breaks Data Hiding: Internal data is exposed, meaning any future changes to how data is stored will break the code
+            //2-Private Fields: Hide the internal data and prevent direct external access.
+            //Public Properties: Act as a gatekeeper to validate data before saving it, giving you full control over read and write permissions
             #endregion 
-            
 
 
         }
